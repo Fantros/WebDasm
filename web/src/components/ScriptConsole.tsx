@@ -101,10 +101,6 @@ export default function ScriptConsole() {
         return stateRef.current.commentMap[cleanAddr] || null;
       },
       getHeuristics: () => stateRef.current.heuristics,
-      getEntropy: () => ({
-        avg: stateRef.current.avgEntropy,
-        scores: stateRef.current.entropyScores,
-      }),
       getDisassembly: () => stateRef.current.currentDisasm,
       getPseudocode: () => stateRef.current.currentPseudoC,
       registerSignature: (pattern: string, name: string) => {
