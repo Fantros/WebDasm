@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+/* ============================================================
+   IDA-PRO DARK THEME — WebDasm React Edition
+   ============================================================ */
+
+:root {
+  --ida-bg: #1E1E1E;
+  --ida-panel: #252526;
+  --ida-panel-2: #2D2D2D;
+  --ida-border: #3F3F46;
+  --ida-text: #D4D4D4;
+  --ida-text-dim: #808080;
+  --ida-menu-bg: #333333;
+  --ida-menu-hover: #505050;
+  --ida-tab-active: #1E1E1E;
+  --ida-tab-inactive: #2D2D2D;
+  --ida-accent: #007ACC;
+  --ida-accent-hover: #1A8AD4;
+
+  /* Syntax colors */
+  --ida-keyword: #569CD6;
+  --ida-string: #CE9178;
+  --ida-number: #B5CEA8;
+  --ida-offset: #B5CEA8;
+  --ida-comment: #6A9955;
+  --ida-red: #F44336;
+  --ida-yellow: #DCDCAA;
+  --ida-purple: #C586C0;
+
+  /* Semantic */
+  --ida-success: #4EC9B0;
+  --ida-warning: #FFD700;
+  --ida-error: #F44336;
+}
+
+/* ============================================================
+   SCROLLBAR
+   ============================================================ */
+
+::-webkit-scrollbar {
+  @apply w-2.5 h-2.5;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-[var(--ida-bg)];
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-[var(--ida-border)] rounded-[2px];
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-[var(--ida-menu-hover)];
+}
+
+::-webkit-scrollbar-corner {
+  @apply bg-[var(--ida-bg)];
+}
+
+
+
+@theme {
+  --spacing-1.25: 5px;
+  --animate-fade-in: fadeIn 0.15s ease-out;
+  --animate-scan: scan 1.5s linear infinite;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(4px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scan {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(300%);
+    }
+  }
+}
