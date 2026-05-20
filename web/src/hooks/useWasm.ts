@@ -43,7 +43,7 @@ export function useWasm() {
       wasmLoaded = true;
       try {
         // @ts-ignore
-        const mod = await import(/* @vite-ignore */ '../../core/pkg/webdasm.js');
+        const mod = await import(/* @vite-ignore */ '../../../core/pkg/webdasm.js');
         await mod.default();
         wasmModule = mod;
         

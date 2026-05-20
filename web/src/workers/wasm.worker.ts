@@ -6,7 +6,7 @@ let wasmModule: any = null;
 async function initWasm() {
   if (wasmModule) return;
   // @ts-ignore - Vite worker import syntax for wasm
-  const mod = await import('../../core/pkg/webdasm.js');
+  const mod = await import('../../../core/pkg/webdasm.js');
   await mod.default();
   wasmModule = mod;
 }
